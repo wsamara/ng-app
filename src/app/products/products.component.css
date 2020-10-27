@@ -1,0 +1,31 @@
+ul.outerList li {
+  padding-bottom:1em;
+}
+
+ul.outerList > li:nth-child(odd) {
+  background-color: lightblue;
+}
+
+ul.outerList li div {
+  float:left;
+}
+
+ul.innerList {
+  margin-top:0;
+}
+
+ul.innerList li {
+  padding-bottom:0.6em;
+}
+
+ul.innerList li:first-child {
+  font-weight: bold;
+}
+
+span {
+  margin-left: 5em;
+  text-decoration: underline;
+  font-style: italic;
+
+}
+

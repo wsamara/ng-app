@@ -1,0 +1,12 @@
+<h2>Our Products</h2>
+
+<ul *ngIf="products" class="outerList">
+  <li *ngFor="let product of products">
+    <div>{{product.prodid}}</div>
+    <ul class="innerList">
+      <li>{{product.shortdesc}}</li>
+      <li>{{product.longdesc}}</li>
+      <li>Size:{{product.unitsize}} <span>Price:{{product.unitprice}}</span></li>
+    </ul>
+  </li>
+</ul>
