@@ -6,31 +6,34 @@
 
   <h6 *ngIf="ok">Your form is valid!</h6>
 
-  <label>
+  <label for="name">
     Full Name:
-    <input type="text" formControlName="name">
+    <input type="text" formControlName="name" id="name">
+  </label>
     <div *ngIf="submitted && emailForm.controls.name.errors" class="err">
       <div *ngIf="emailForm.controls.name.errors.required">You cannot submit the form without a name</div>
       <div *ngIf="emailForm.controls.name.errors.minlength">A valid name needs to have at least 5 characters</div>
     </div>
-  </label>
 
-  <label>
+
+  <label for="email">
     E-mail:
-    <input type="email" formControlName="email">
+    <input type="email" formControlName="email" id="email">
+  </label>
     <div *ngIf="submitted && emailForm.controls.email.errors" class="err">
       <div *ngIf="emailForm.controls.email.errors.required">Please enter a valid e-mail</div>
       <div *ngIf="emailForm.controls.email.errors.email">Must be a valid e-mail address</div>
     </div>
-  </label>
 
-  <label>
+
+  <label for="message">
     Message:
-    <textarea formControlName="message"></textarea>
+    <textarea formControlName="message" id="message"></textarea>
+  </label>
     <div *ngIf="submitted && emailForm.controls.message.errors" class="err">
       <div *ngIf="emailForm.controls.message.errors.required">What is your message to us?</div>
     </div>
-  </label>
+
 
   <input type="submit" value="Send Message" class="btnsub">
   <input type="reset" value="Clear Form" class="btnsub">
