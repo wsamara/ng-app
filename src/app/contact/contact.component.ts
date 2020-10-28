@@ -20,6 +20,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
+
+
   onSubmit(): void {
     this.submitted = true;
 
